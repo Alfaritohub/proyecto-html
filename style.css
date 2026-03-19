@@ -1,0 +1,157 @@
+/* Variables de color para fácil edición */
+:root {
+    --whatsapp-green: #25d366;
+    --brand-teal: #128c7e;
+    --dark-grey: #333;
+    --light-grey: #f4f4f4;
+    --white: #ffffff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+/* Navegación */
+header {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--brand-teal);
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--brand-teal);
+}
+
+/* Secciones Principales */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero h1 { font-size: 3.5rem; }
+
+.container {
+    padding: 80px 10%;
+}
+
+.bg-light {
+    background-color: var(--light-grey);
+    padding: 80px 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: var(--brand-teal);
+}
+
+.text-center { text-align: center; }
+
+/* Grid de Productos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card i {
+    font-size: 3.5rem;
+    color: var(--brand-teal);
+    margin-bottom: 20px;
+}
+
+/* Botones y WhatsApp */
+.cta-whatsapp {
+    display: inline-block;
+    background: var(--whatsapp-green);
+    color: var(--white);
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: var(--white);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 2000;
+}
+
+.cta-whatsapp:hover, .whatsapp-fixed:hover {
+    transform: scale(1.05);
+    background-color: var(--brand-teal);
+}
+
+footer {
+    background: var(--dark-grey);
+    color: var(--white);
+    text-align: center;
+    padding: 30px;
+}
